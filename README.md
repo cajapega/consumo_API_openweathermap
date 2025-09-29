@@ -1,4 +1,4 @@
-# WeatherApp - Mi Primera Práctica con React
+# WeatherApp - Práctica con React con API
 
 Este proyecto es una practica de una aplicación en **React** que consume datos de una **API externa**, en este caso la API de **OpenWeather**.
 
