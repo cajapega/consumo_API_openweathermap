@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CitySearch from "./components/citySearch";
 
 function WeatherApp() {
   const [city, setCity] = useState("");
@@ -19,13 +20,7 @@ function WeatherApp() {
     <div style={{padding: "20px", textAlign: "center"}}>
       <h1>Consulta el Clima</h1>
 
-      <input
-        type="text"
-        placeholder="Ingresa una ciudad"
-        value={city}
-        onChange={(e) => setCity(e.target.value)}
-      />
-      <button style={{marginLeft:"20px"}} onClick={getWeather}>Buscar</button>
+      <CitySearch city={city} setCity={setCity} getWeather={getWeather}></CitySearch>
 
       {weather && (
         <div style={{ marginTop: "20px" }}>
