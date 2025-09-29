@@ -13,7 +13,12 @@ La aplicación permite al usuario:
 
 ## Captura de la aplicación
 
-![WeatherApp](./src/assets/consultaelclima.png)  
+<p align="center">
+  <img src="./src/assets/consultaelclima.png" alt="WeatherApp" width="400">
+</p>
+
+<p align="center"><i>Pantalla principal de la aplicación mostrando el clima</i></p>
+
 
 ## Componentes
 
