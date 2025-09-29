@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CitySearch from "./components/citySearch";
+import AnswerWeather from "./components/answerWeather";
 
 function WeatherApp() {
   const [city, setCity] = useState("");
@@ -11,9 +12,7 @@ function WeatherApp() {
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=es`
     )
       .then((res) => res.json())
-      .then((data) => {
-        setWeather(data);
-      });
+      .then((data) => { setWeather(data); });
   };
 
   return (
@@ -21,14 +20,8 @@ function WeatherApp() {
       <h1>Consulta el Clima</h1>
 
       <CitySearch city={city} setCity={setCity} getWeather={getWeather}></CitySearch>
+      {weather && <AnswerWeather weather={weather}></AnswerWeather> }
 
-      {weather && (
-        <div style={{ marginTop: "20px" }}>
-          <h2 style={{color: "#0c8d9eff"}} >{weather.name}</h2>
-          <p>🌡️ Temperatura: {weather.main.temp} °C</p>
-          <p>☁️ Nubosidad: {weather.weather[0].description}</p>
-        </div>
-      )}
     </div>
   );
 }
